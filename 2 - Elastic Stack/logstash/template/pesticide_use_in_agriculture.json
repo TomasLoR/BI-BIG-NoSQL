@@ -1,0 +1,41 @@
+{
+  "index_patterns": ["pesticide_use_in_agriculture"],
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "freq": {
+        "type": "keyword"
+      },
+      "unit": {
+        "type": "keyword"
+      },
+      "pesticid": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "crops": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword"
+          }
+        }
+      },
+      "geo": {
+        "type": "keyword"
+      },
+      "TIME_PERIOD": {
+        "type": "integer"
+      },
+      "OBS_VALUE": {
+        "type": "float"
+      }
+    }
+  }
+}
